@@ -1,0 +1,29 @@
+ {% extends 'app/pogo.html' %}
+ {% block title %}Add a new Album{% endblock %}
+ {% block albums_active %}active{% endblock %}
+ {% block body %}
+ <div class="container-fluid">
+     <div class ="row">
+         <div class="col-sm-12 col-md-7">
+             <div class="panel panel-default">
+                 <div class="panel-body">
+
+                     <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                         {% csrf_token %}
+                         {% include 'app/form-template.html' %}
+                         <div class="form-group">
+                             <div class="cocl-sm-offset-2 col-sn-10">
+                                 <button type="submit" class="btn btn-succecss">Submit</button>
+                             </div>
+                         </div>
+
+                     </form>
+
+                 </div>
+
+             </div>
+         </div>
+
+     </div>
+ </div>
+ {% endblock %}
